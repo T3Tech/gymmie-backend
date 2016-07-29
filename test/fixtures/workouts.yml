@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  workout_type: one
+  when: 2016-07-29 19:25:47
+  gym: one
+
+two:
+  user: two
+  workout_type: two
+  when: 2016-07-29 19:25:47
+  gym: two

@@ -1,2 +1,26 @@
 <h1>Welcome To Gymmie</h1>
 <p>Let us help you find a workout partner.</p>
+
+<% if @user %>
+
+<p><%= @user.name %></p>
+
+<p>About: <%= @user.description %></p>
+
+<p>Goals:
+  <% @user.goals.each do |g| %>
+    <%= g.name %> &nbsp;
+  <% end %>
+</p>
+
+<p>Interests: <% @user.interests.each do |i| %>
+    <%= i.name %> &nbsp;
+  <% end %>
+</p>
+
+<p>Workouts:</p>
+  <% @user.workouts.each do |w| %>
+    <p><%= w.workout_type.name %> &nbsp; <%= w.when %> &nbsp; <%= w.gym.name %> </p>
+  <% end %>
+
+<% end %>
