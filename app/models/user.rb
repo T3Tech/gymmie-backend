@@ -10,7 +10,9 @@ class User < ApplicationRecord
   has_many :workouts
 
   def name
-    first_name + " " +last_name
+    if first_name & last_name
+      first_name + " " +last_name
+    end
   end
 
 end
